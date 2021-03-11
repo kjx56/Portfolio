@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>
+Koko Store
+</title>
+<link rel="stylesheet" href="Slideshow.css"/>
+<script>
+var orange = 0;
+ var orangeprice = 600;
+ 
+ var apple = 0;
+ var appleprice = 600;
+ var beans = 0;
+ var beansprice = 800;
+
+</script>
+ 
+
+
+
+<div id ="top">
+ <img class="slides" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/1.jpg" />
+ <img class="slides" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/2.jpg" />
+ <img class="slides" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/3.jpg" />
+  <button class="btn" onclick="plusindex(-1)" id="btn1">&#10094;</button>
+  <button class="btn" onclick="plusindex(1)" id="btn2">&#10095;</button>
+ 
+
+
+ 
+</div>
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body bgcolor="white">
+
+
+<script>
+ //code for slides
+var index = 1;
+
+ function plusindex(n){
+    index = index + n;
+    showImage(index);
+}
+
+showimage(1);
+
+function showImage(n){
+ var i;
+ var x = document.getElementsByClassName("slides");
+ if(n > x.length){ index = 1};
+ if(n < 1){ index = x.length};
+ for(i=0;i<x.length;i++)
+ {
+ x[i].style.display = "none";
+
+}
+
+  x[index-1].style.display = "block";
+
+
+
+}
+
+
+   
+</script>
+
+ 
+
+<div id ="middle">
+<h1>Koko's Online food store</h1>
+</div>
+
+<div id ="bottom">
+<form>
+<fieldset>
+<legend><font color="Gold">Items<font></legend>
+<label><font color="orange"><b>Oranges</b></font></Label>
+<br></br>
+<img class="foodpic" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/oranges.jpg" align="right" />
+<ul>
+<li><p><font color="green" size="5">One Dozen Selects Grade A Organic Oranges - World Class Grade 'A' Navel Oranges from Organic Mountain Orchards - World Class Grade 'A' Navel Oranges from Organic Mountain Orchards - Natural organic source of sunshine!
+</font></p></li>
+</ul>
+<label><font color="Black">Price:600 Naira</font></label>
+<button type="reset"class="buyme" onclick="bought()">Buy Now</button>
+
+<script>
+ function bought(){
+orange++; 
+
+alert(  orange +  " " + "orange(s)" + " " + "in your cart");
+
+
+}
+
+</script>
+ 
+
+<br></br>
+<label><font color="Orange"><b>Apples</b></font></Label>
+<br></br>
+<img class="foodpic" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/apples.jpg" align="right" />
+<ul>
+<li><p><font color="Green" size="5">POPULAR IN THE USA: Gala is an excellent eating apples and is on its way to becoming the most popular eating apple within the United States and abroad
+SUPER COLOR AND CRUNCH: Our Fresh, Nutritious, Kosher Gala have a glowing red-orange appearance, sweet & wonderful taste, and a Superior "crunch quotient”
+WELL-KNOWN ORIGINS: This variety originated in New Zealand and includes both Red Delicious and Golden Delicious in its ancestry
+
+</font></p></li>
+</ul>
+<label><font color="Black">Price:600 Naira</font></label>
+<button type="reset" class="buyme" onclick="boughtapp()">Buy Now</button>
+
+<script>
+
+
+
+function boughtapp(){
+apple++; 
+alert(  apple +  " " + "apple(s)" + " " + "in your cart");
+ 
+}
+</script>
+
+<br></br>
+<label><font color="Orange"><b>Kidney Beans</b></font></Label>
+<br></br>
+<img class="foodpic" src="C:\Users\Adekoyejo\Desktop\Koyejo Shote\Shopping cart/beans.jpg" align="right" />
+<ul>
+<li><p><font color="Green" size="5">Organic dark red kidney beans with full-bodied flavor
+Low-sodium, cholesterol-free
+Naturally gluten-free
+6g of protein, 5g of fiber
+15 ounce can
+
+</font></p></li>
+</ul>
+<label><font color="Black">Price:800 Naira</font></label>
+<button type="reset" class="buyme" onClick="boughtbean()">Buy Now</button>
+
+<script>
+ function boughtbean(){
+beans++; 
+
+alert( beans +  " " + "tin(s) of canned beans" + " " + "in your cart");
+ 
+}
+</script>
+
+</fieldset>
+<fieldset>
+<legend><font color="Black">Customer info</font></legend>
+<label><font color="Black">Name:</font></label><input type="text" name="name">
+<label><font color="Black">Surname</font></label><input type="text" name="name">
+<br></br>
+<label><font color="Black">Password</font></label><input type="password" name="name">
+<label><font color="Black">Re-enter Password</font></label><input type="password" name="name">
+<br></br>
+<label><font color="Black" align ="center">Address</font></label><input type="text" name="name">
+<label><font color="Black" align ="center">E-mail Address</font></label><input type="text" name="name">
+
+<button type="submit" class="buyme" onclick="deletecr()">Reset Cart</button>
+<button type="reset" class="buyme" onclick="ordercr()">Order Goods</button>
+<script>
+ function ordercr(){
+ var a = parseInt(orange);
+ var b = parseInt(apple);
+ var c = parseInt(beans);
+  totalp = (a * 600) + (b * 600) + (c * 800);
+  alert("Your order included:" + "" + apple +  " " + "apple(s)" + "" + orange +  " " + "orange(s)" + " & " + beans +  " " + "tin(s) of canned beans" + " Your total is:" + " " + totalp + " Naira" )
+
+ if( totalp > 2000){ alert("You are elegible for a 25% discount off store products")}else{ alert("You are not elegible for a discount until you spend more than 2000 Naira")}
+
+alert("Thank you for shopping with us at the Koko grocery store");
+ }
+ 
+</script>
+</fieldset>
+</form>
+</div>
+
+
+</body>
+
+ 
+
+
+</html>

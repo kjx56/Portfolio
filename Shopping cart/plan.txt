@@ -1,0 +1,17 @@
+1. Spaghetti
+2. rice
+3. eggs
+4. chicken
+5. potatoes
+6. salt
+7. oatmeal
+8. apples
+9. Oranges
+10. Banannas 
+
+ plan a simple shopping cart    
+  div for each item
+  name of food
+  picture
+  description 
+  amount 
